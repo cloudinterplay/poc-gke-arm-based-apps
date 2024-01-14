@@ -1,0 +1,31 @@
+---
+wordpress:
+  nodeSelector:
+    kubernetes.io/arch: arm64
+  tolerations:
+  - effect: NoSchedule
+    key: kubernetes.io/arch
+    operator: Equal
+    value: arm64
+  service:
+    type: ClusterIP
+  ingress:
+    enabled: true
+    ClassName: "nginx-external"
+  mariadb:
+    enabled: true
+    storage:
+      requestedSize: 2G
+    settings:
+      rootPassword: dummyphrase
+    userDatabase:
+      name: wordpress
+      user: wordpress
+      password: wordpress
+    tolerations:
+    - effect: NoSchedule
+      key: kubernetes.io/arch
+      operator: Equal
+      value: arm64
+    nodeSelector:
+      kubernetes.io/arch: arm64

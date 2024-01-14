@@ -1,0 +1,8 @@
+---
+wordpress:
+  ingress:
+    hosts:
+    - host: "wordpress.cloudinterplay.com"
+      paths:
+      - path: /
+        pathType: ImplementationSpecific

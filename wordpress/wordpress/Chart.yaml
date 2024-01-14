@@ -1,0 +1,9 @@
+---
+apiVersion: v2
+name: wordpress-dummy
+type: application
+version: 1.0.0
+dependencies:
+- name: wordpress
+  version: "0.10.5"
+  repository: "https://groundhog2k.github.io/helm-charts/"
