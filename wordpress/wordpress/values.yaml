@@ -11,7 +11,7 @@ wordpress:
     type: ClusterIP
   ingress:
     enabled: true
-    ClassName: "nginx-external"
+    className: "nginx-external"
   mariadb:
     enabled: true
     storage:
